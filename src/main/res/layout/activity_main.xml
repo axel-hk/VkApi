@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/horizontal_padding"
+    android:paddingEnd="@dimen/horizontal_padding"
+    android:paddingTop="@dimen/vertical_padding"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="15dp">
+        <EditText
+            android:id = "@+id/set_search_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint = "@string/input_id"
+            android:inputType="text"
+            android:padding="15dp"
+            android:textSize="30sp"
+            android:layout_weight="3"
+
+            />
+        <Button
+            android:id = "@+id/btn_search_vk"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/search"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/vertical_padding"
+        >
+    <TextView
+        android:id = "@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "@string/result"
+        android:textSize="30sp"
+        android:visibility="invisible"/>
+    </ScrollView>
+        <TextView
+            android:id = "@+id/tv_error_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:padding="16dp"
+            android:text="@string/error_message"
+            android:visibility="invisible">
+
+        </TextView>
+        <ProgressBar
+            android:id = "@+id/pb_loading_indicator"
+            android:layout_gravity="center"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </ProgressBar>
+    </FrameLayout>
+
+
+</LinearLayout>
