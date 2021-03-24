@@ -17,7 +17,7 @@ public class NetworkUtils {
     private static final String PARAM_VERSION = "v";
     private static final String API_VERSION = "5.130";
     private static final String PARAM_ACCESS_TOKEN = "access_token";
-    private static final String ACCESS_TOKEN = "e7f320a2e7f320a2e7f320a2e4e785b2bcee7f3e7f320a287c6335edb71f014cce005c4";
+    private static final String ACCESS_TOKEN = "";//use your own token
 
     public static URL generateURL(String userIds) {
         Uri builtUri = Uri.parse(VK_API_BASE_URL + VK_USERS_GET)
